@@ -1,38 +1,95 @@
 ---
 import '../styles/global.css';
 ---
-<div class="text-gray-300 mx-auto bg-gray-900 h-screen w-screen fixed p-6  justify-center items-center" >
-	<div class="max-w-[740px] mx-auto w-full">
-	<div class="flex flex-col items-center justify-center">
-		<img draggable="false" class="w-24 h-24 rounded-full border-4 border-cyan-300 mb-4" src="https://avatars.githubusercontent.com/u/148649344?v=4" alt="profile picture" />
-		<h1 class="text-2xl md:text-4xl font-semibold mb-2">Morgui Mateo</h1>
-		<p class="text-md text-gray-500 m-3">Full Stack Developer</p>	
-		<div class="text-cyan-400 list-disc flex flex-row gap-2 m-1">
-			<a class="border-2 border-gray-700 rounded-md p-2" href="https://github.com/morgui-mateo">Github</a>
-			<a class="border-2 border-gray-700 rounded-md p-2" href="mailto:morguimateo2@gmail.com">Gmail</a>
-		</div>
-	</div>
-	<section class="flex flex-col items-center justify-center mt-4">
-		<h2 class="text-2xl font-bold ">About Me</h2>
-		<p class="text-sm text-gray-500 border-2 border-gray-700 rounded-md p-4 mt-2 max-w-full">I am a full stack developer with a passion for building web applications. I am a quick learner and I am always looking to improve my skills.</p>
+<div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 text-gray-200">
+	<div class="max-w-3xl mx-auto px-6 py-10">
+		
+		<!-- Main -->
+		<div class="flex flex-col items-center justify-center mb-12">
+			<div class="relative mb-5">
+				<img draggable="false" class="w-24 h-24 rounded-full border-3 border-cyan-400 shadow-lg shadow-cyan-400/20" src="https://avatars.githubusercontent.com/u/148649344?v=4" alt="profile picture" />
 
-	</section>
-	<section class="flex flex-col items-center justify-center mt-4">
-		<h2 class="text-2xl font-bold">Skills</h2>
-			<div class="flex flex-wrap gap-2 p-2">
-				<div class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 hover:bg-primary/80 bg-ds-gray-200 text-ds-gray-900 border border-ds-gray-300">HTML</div>
-				<div class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 hover:bg-primary/80 bg-ds-gray-200 text-ds-gray-900 border border-ds-gray-300">CSS</div>
-				<div class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 hover:bg-primary/80 bg-ds-gray-200 text-ds-gray-900 border border-ds-gray-300">JavaScript</div>
-				<div class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 hover:bg-primary/80 bg-ds-gray-200 text-ds-gray-900 border border-ds-gray-300">TypeScript</div>
-				<div class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 hover:bg-primary/80 bg-ds-gray-200 text-ds-gray-900 border border-ds-gray-300">Tailwind</div>
-				<div class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 hover:bg-primary/80 bg-ds-gray-200 text-ds-gray-900 border border-ds-gray-300">React</div>
-				<div class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 hover:bg-primary/80 bg-ds-gray-200 text-ds-gray-900 border border-ds-gray-300">Astro</div>
-				<div class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 hover:bg-primary/80 bg-ds-gray-200 text-ds-gray-900 border border-ds-gray-300">Next.js</div>
-				<div class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 hover:bg-primary/80 bg-ds-gray-200 text-ds-gray-900 border border-ds-gray-300">Node.js</div>
-				<div class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 hover:bg-primary/80 bg-ds-gray-200 text-ds-gray-900 border border-ds-gray-300">MongoDB</div>
-				
+				<!-- Fondo de la pfp que hace que sea mas bonita con un color transparente sutil-->
+				<div class="absolute inset-0 rounded-full bg-gradient-to-t from-cyan-400/10 to-transparent"></div>
 			</div>
-	</section>
+			<h1 class="text-2xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">Morgui Mateo</h1>
+			<p class="text-base text-gray-400 mb-5">Full-Stack Developer</p>	
+			<div class="flex flex-row gap-3">
+				<a class="px-3 py-2 text-sm bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-cyan-400 rounded-lg transition-all duration-300 text-cyan-400 hover:text-cyan-300 font-medium" href="https://github.com/MorguiMateo">Github</a>
+				<a class="px-3 py-2 text-sm bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-all duration-300 text-gray-900 font-medium" href="mailto:morguimateo2@gmail.com">Gmail</a>
+			</div>
+		</div>
+		<!-- About Me -->
 
-</div>
+		<section class="mb-12">
+			<div class="mb-6">
+				<h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-100">About Me</h2>
+			</div>
+			<div class="bg-gray-800/50 border border-gray-700/50 rounded-xl p-5 shadow-xl">
+				<!-- El leading-relaxed es igual a line-height: 1.625; -->
+				<p class="text-sm text-gray-300 leading-relaxed">
+					Hello, I am Mateo Morgui, a "full-stack" developer with basic knowledge in web development and experience in scraping. I am passionate about technology and always strive to learn and improve my skills.				</p>
+			</div>
+		</section>
+
+		<!-- Skills -->
+		<section class="mb-12">
+			<div class="mb-6">
+				<h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-100">Skills</h2>
+			</div>
+			<div class="flex flex-wrap gap-2">
+				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">HTML</span>
+				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">CSS</span>
+				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">JavaScript</span>
+				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">TypeScript</span>
+				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">Tailwind</span>
+				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">React</span>
+				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">Astro</span>
+				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">Next.js</span>
+				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">Node.js</span>
+				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">MongoDB</span>
+				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">Shadcn</span>
+				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">Scraping</span>
+				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">Vercel</span>
+				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">ViteJS</span>
+			</div>
+		</section>
+
+		<!-- Projectos -->
+		<section class="mb-12">
+			<div class="mb-6">
+				<h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-100">Projects</h2>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+				<div class="group hover:scale-[1.01] transition-all duration-300 bg-gray-800/50 border border-gray-700/50 rounded-xl p-5 shadow-xl hover:shadow-2xl hover:border-cyan-400/30"> 
+					<div class="w-full h-32 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-3 flex items-center justify-center">
+						<div class="text-gray-500 text-xs">Project Image</div>
+					</div>
+					<div class="text-center">
+						<h3 class="text-lg font-semibold text-gray-100 mb-2 group-hover:text-cyan-400 transition-colors duration-300">Kalak Website</h3>
+						<p class="text-xs text-gray-400 leading-relaxed mb-3">Kalak is a pet food website that lets customers order online via WhatsApp, featuring a calculator to determine the right amount of food for each animal.</p>
+						<div class="flex justify-center gap-2">
+							<span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Next.js</span>
+							<span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">TypeScript</span>
+							<span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Tailwind</span>
+						</div>
+					</div>
+				</div>
+				<div class="group hover:scale-[1.01] transition-all duration-300 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-5 shadow-xl hover:shadow-2xl hover:border-cyan-400/30"> 
+					<div class="w-full h-32 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-3 flex items-center justify-center">
+						<div class="text-gray-500 text-xs">Project Image</div>
+					</div>
+					<div class="text-center">
+						<h3 class="text-lg font-semibold text-gray-100 mb-2 group-hover:text-cyan-400 transition-colors duration-300">AnimeflvClon</h3>
+						<p class="text-xs text-gray-400 leading-relaxed mb-3">AnimeflvClon is a scrapping-based clone of an anime website created to learn and implement web development concepts.</p>
+						<div class="flex justify-center gap-2">
+							<span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Next.js</span>
+							<span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Playwright</span>
+							<span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Tailwind</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 </div>
