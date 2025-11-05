@@ -1,5 +1,27 @@
 ---
 import '../styles/global.css';
+import SkillTag from './SkillTag.astro';
+import { fade } from 'astro:transitions';
+
+const skills = [
+	'HTML',
+	'CSS',
+	'JavaScript',
+	'TypeScript',
+	'Tailwind',
+	'React',
+	'Astro',
+	'Next.js',
+	'Node.js',
+	'MongoDB',
+	'Shadcn',
+	'Scraping',
+	'Vercel',
+	'ViteJS',
+	'Playwright',
+];
+
+const slowFade = fade({ duration: 240 });
 ---
 <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 text-gray-200">
 	<div class="max-w-3xl mx-auto px-6 py-10">
@@ -38,21 +60,9 @@ import '../styles/global.css';
 				<h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-100">Skills</h2>
 			</div>
 			<div class="flex flex-wrap gap-2">
-				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">HTML</span>
-				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">CSS</span>
-				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">JavaScript</span>
-				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">TypeScript</span>
-				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">Tailwind</span>
-				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">React</span>
-				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">Astro</span>
-				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">Next.js</span>
-				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">Node.js</span>
-				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">MongoDB</span>
-				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">Shadcn</span>
-				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">Scraping</span>
-				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">Vercel</span>
-				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">ViteJS</span>
-				<span class="cursor-default px-3 py-1 bg-gray-800/70 border border-gray-600/50 rounded-full text-xs font-medium text-gray-200 hover:border-cyan-400/50 hover:bg-gray-700/70 transition-all duration-300">Playwright</span>
+				{skills.map((skill) => (
+					<SkillTag label={skill} />
+				))}
 			</div>
 		</section>
 
@@ -62,34 +72,77 @@ import '../styles/global.css';
 				<h2 class="text-xl md:text-2xl font-bold mb-3 text-gray-100">Projects</h2>
 			</div>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-				<div class="group hover:scale-[1.01] transition-all duration-300 bg-gray-800/50 border border-gray-700/50 rounded-xl p-5 shadow-xl hover:shadow-2xl hover:border-cyan-400/30"> 
-					<div class="w-full h-32 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-3 flex items-center justify-center">
-						<div class="text-gray-500 text-xs">Project Image</div>
+				<a
+					class="group block hover:scale-[1.01] transition-all duration-300 bg-gray-800/50 border border-gray-700/50 rounded-xl p-5 shadow-xl hover:shadow-2xl hover:border-cyan-400/30"
+					href="/projects/kalak"
+					transition:animate={slowFade}
+				>
+					<div
+						class="w-full h-32 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-3 overflow-hidden border border-gray-700/60"
+						transition:name="kalak-image"
+					>
+						<img
+							src="/kalak.png"
+							alt="Kalak hero: Gato comiendo comida natural frente al CTA de la marca"
+							class="w-full h-full object-cover"
+							loading="lazy"
+						/>
 					</div>
 					<div class="text-center">
-						<h3 class="text-lg font-semibold text-gray-100 mb-2 group-hover:text-cyan-400 transition-colors duration-300">Kalak Website</h3>
-						<p class="text-xs text-gray-400 leading-relaxed mb-3">Kalak is a pet food website that lets customers order online via WhatsApp, featuring a calculator to determine the right amount of food for each animal.</p>
+						<h3
+							class="text-lg font-semibold text-gray-100 mb-2 group-hover:text-cyan-400 transition-colors duration-300"
+							transition:name="kalak-title"
+						>
+							Kalak Website
+						</h3>
+						<p
+							class="text-xs text-gray-400 leading-relaxed mb-3"
+							transition:name="kalak-description"
+						>Kalak es una marca de alimentación natural para mascotas que comunica su propuesta con un enfoque cálido y cercano.
+						</p>
 						<div class="flex justify-center gap-2">
 							<span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Next.js</span>
 							<span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">TypeScript</span>
 							<span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Tailwind</span>
 						</div>
 					</div>
-				</div>
-				<div class="group hover:scale-[1.01] transition-all duration-300 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-5 shadow-xl hover:shadow-2xl hover:border-cyan-400/30"> 
-					<div class="w-full h-32 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-3 flex items-center justify-center">
-						<div class="text-gray-500 text-xs">Project Image</div>
+				</a>
+				<a
+					class="group block hover:scale-[1.01] transition-all duration-300 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-5 shadow-xl hover:shadow-2xl hover:border-cyan-400/30"
+					href="/projects/anime"
+					transition:animate={slowFade}
+				>
+					<div
+						class="w-full h-32 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-3 overflow-hidden border border-gray-700/60"
+						transition:name="anime-image"
+					>
+						<img
+							src="/Anime.png"
+							alt="Captura de AnimeflvClon mostrando listado de episodios"
+							class="w-full h-full object-cover"
+							loading="lazy"
+						/>
 					</div>
 					<div class="text-center">
-						<h3 class="text-lg font-semibold text-gray-100 mb-2 group-hover:text-cyan-400 transition-colors duration-300">AnimeflvClon</h3>
-						<p class="text-xs text-gray-400 leading-relaxed mb-3">AnimeflvClon is a scrapping-based clone of an anime website created to learn and implement web development concepts.</p>
+						<h3
+							class="text-lg font-semibold text-gray-100 mb-2 group-hover:text-cyan-400 transition-colors duration-300"
+							transition:name="anime-title"
+						>
+							AnimeflvClon
+						</h3>
+						<p
+							class="text-xs text-gray-400 leading-relaxed mb-3"
+							transition:name="anime-description"
+						>
+							Página clon construida como práctica para aprender scraping y automatizar la recolección de episodios.
+						</p>
 						<div class="flex justify-center gap-2">
 							<span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Next.js</span>
 							<span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Playwright</span>
 							<span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">Tailwind</span>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 		</section>
 	</div>

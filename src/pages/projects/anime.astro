@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+import { fade } from 'astro:transitions';
+
+const slowFade = fade({ duration: 240 });
+---
+
+<Layout>
+	<div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 text-gray-200">
+		<div class="max-w-3xl mx-auto px-6 py-10">
+			<a class="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300" href="/" transition:animate={slowFade}>
+				← Back to home
+			</a>
+			<section class="mt-8 bg-gray-900/40 border border-gray-700/60 rounded-2xl p-8 shadow-2xl">
+				<div class="flex flex-col md:flex-row items-center gap-8">
+					<div
+						class="w-full md:w-1/2 aspect-[4/3] bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl overflow-hidden border border-gray-700/60 shadow-lg"
+						transition:name="anime-image"
+					>
+						<img
+							src="/Anime.png"
+							alt="Captura de la landing AnimeflvClon con listado de episodios"
+							class="w-full h-full object-cover"
+							loading="lazy"
+						/>
+					</div>
+					<div class="w-full md:w-1/2 space-y-4 text-center md:text-left">
+						<h1
+							class="text-3xl md:text-4xl font-bold text-gray-100"
+							transition:name="anime-title"
+						>
+							AnimeflvClon
+						</h1>
+						<p
+							class="text-sm md:text-base text-gray-300 leading-relaxed"
+							transition:name="anime-description"
+						>
+							AnimeflvClon es una página clon creada como práctica personal para aprender técnicas de scraping y mapear
+							flows completos de consumo de datos, desde la captura automatizada hasta la visualización ordenada de series y episodios.
+							
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</Layout>
