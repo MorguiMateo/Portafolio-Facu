@@ -1,4 +1,4 @@
-Video Presentacion: https://youtu.be/ZPOBRQPsfQQ
+Video Presentación: https://youtu.be/ZPOBRQPsfQQ
 
 
 # Astro Starter Kit: Basics
