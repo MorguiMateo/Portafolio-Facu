@@ -1,10 +1,5 @@
----
-// Contact Modal Component
----
-
 <div id="contact-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50 px-4">
 	<div class="bg-gray-800 border border-gray-700 rounded-xl p-6 w-full max-w-md shadow-2xl relative animate-fade-in">
-		<!-- Close Button -->
 		<button
 			id="close-modal"
 			class="absolute top-4 right-4 text-gray-400 hover:text-cyan-400 transition-colors duration-200"
@@ -15,7 +10,6 @@
 			</svg>
 		</button>
 
-		<!-- Modal Header -->
 		<h2 class="text-2xl font-bold mb-2 bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">
 			Contact Me
 		</h2>
@@ -23,9 +17,7 @@
             Contact me to discuss your project or to get more information about me.
 		</p>
 
-		<!-- Form -->
 		<form action="https://formspree.io/f/xldarrva" method="POST" id="contact-form" class="space-y-4">
-			<!-- Name Field -->
 			<div>
 				<label for="name" class="block text-sm font-medium text-gray-300 mb-2">
 					Name
@@ -40,7 +32,6 @@
 				/>
 			</div>
 
-			<!-- Email Field -->
 			<div>
 				<label for="email" class="block text-sm font-medium text-gray-300 mb-2">
 					Email
@@ -55,7 +46,6 @@
 				/>
 			</div>
 
-			<!-- Message Field -->
 			<div>
 				<label for="message" class="block text-sm font-medium text-gray-300 mb-2">
 					Message
@@ -70,7 +60,6 @@
 				></textarea>
 			</div>
 
-			<!-- Submit Button -->
 			<button
 				type="submit"
 				class="w-full px-4 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-all duration-200 text-gray-900 font-medium shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/30"
@@ -103,7 +92,6 @@
 </style>
 
 <script>
-	// Open modal
 	const openModalBtn = document.getElementById('open-contact-modal');
 	const modal = document.getElementById('contact-modal');
 	const closeModalBtn = document.getElementById('close-modal');
@@ -114,7 +102,6 @@
 		document.body.style.overflow = 'hidden';
 	});
 
-	// Close modal
 	const closeModal = () => {
 		modal?.classList.remove('show');
 		document.body.style.overflow = '';
@@ -122,25 +109,20 @@
 
 	closeModalBtn?.addEventListener('click', closeModal);
 
-	// Close on background click
 	modal?.addEventListener('click', (e) => {
 		if (e.target === modal) {
 			closeModal();
 		}
 	});
 
-	// Close on Escape key
 	document.addEventListener('keydown', (e) => {
 		if (e.key === 'Escape' && modal?.classList.contains('show')) {
 			closeModal();
 		}
 	});
 
-	// Handle form submission
 	const form = document.getElementById('contact-form') as HTMLFormElement;
 	form?.addEventListener('submit', () => {
-		// Form will submit naturally to Formspree
-		// You can add a success message here if needed
 		setTimeout(() => {
 			closeModal();
 		}, 100);
